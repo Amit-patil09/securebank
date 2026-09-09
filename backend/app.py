@@ -14,7 +14,7 @@ db = mysql.connector.connect(
     user=os.environ["DB_USER"],
     password=os.environ["DB_PASSWORD"],
     database=os.environ["DB_NAME"],
-    ssl_disabled=False
+    ssl_disabled=False,
     autocommit=True
 )
 
