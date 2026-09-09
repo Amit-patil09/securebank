@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* LOGIN */
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0b3d91, #1976d2);
+}
+
+.login-box {
+    background: white;
+    width: 380px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-box h1 {
+    color: #0b3d91;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 13px;
+    background: #0b3d91;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-box button:hover {
+    background: #072d6b;
+}
+
+.demo {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    display: none;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    height: 70px;
+    background: #0b3d91;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links button {
+    background: white;
+    color: #0b3d91;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* MAIN */
+
+main {
+    width: 86%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    margin-bottom: 8px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card p {
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.card h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.balance-card {
+    background: #0b3d91;
+    color: white;
+}
+
+.balance-card p {
+    color: #ddd;
+}
+
+
+/* ACTIONS */
+
+.quick-actions {
+    margin-top: 35px;
+}
+
+.quick-actions h2 {
+    margin-bottom: 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.actions button {
+    padding: 15px 25px;
+    border: none;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.actions button:hover {
+    background: #e9f0ff;
+}
+
+
+/* TRANSACTIONS */
+
+.transactions {
+    margin-top: 40px;
+}
+
+.transactions h2 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 17px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #eef3fa;
+}
+
+.credit {
+    color: green;
+    font-weight: bold;
+}
+
+.debit {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        padding: 0 4%;
+    }
+
+    .nav-links a {
+        display: none;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}

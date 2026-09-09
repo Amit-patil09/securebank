@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-box">
+            <h1>SecureBank</h1>
+            <p>Welcome back</p>
+
+            <form id="loginForm">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="demo">Demo: any username and password</p>
+        </div>
+    </div>
+
+
+    <!-- Dashboard -->
+    <div class="dashboard" id="dashboard">
+
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">SecureBank</div>
+
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Accounts</a>
+                <a href="#">Transfers</a>
+                <a href="#">Payments</a>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <div class="welcome">
+                <h2>Welcome, <span id="displayUsername"></span></h2>
+                <p>Here's your account overview.</p>
+            </div>
+
+
+            <!-- Cards -->
+            <section class="cards">
+
+                <div class="card balance-card">
+                    <p>Available Balance</p>
+                    <h1>₹<span id="balance">0.00</span></h1>
+                    <p>Account: **** 4582</p>
+                </div>
+
+                <div class="card">
+                    <p>Account Type</p>
+                    <h2>Savings</h2>
+                    <p>Interest Rate: 4.5%</p>
+                </div>
+
+                <div class="card">
+                    <p>Credit Card</p>
+                    <h2>₹25,000</h2>
+                    <p>Available Credit</p>
+                </div>
+
+            </section>
+
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+
+                <div class="actions">
+                    <button onclick="showMessage('Transfer Money')">
+                        Transfer Money
+                    </button>
+
+                    <button onclick="showMessage('Pay Bills')">
+                        Pay Bills
+                    </button>
+
+                    <button onclick="showMessage('Deposit Money')">
+                        Deposit
+                    </button>
+
+                    <button onclick="showMessage('Withdraw Money')">
+                        Withdraw
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- Transactions -->
+            <section class="transactions">
+                <h2>Recent Transactions</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="transactionList">
+                        <tr>
+                            <td>08 Sep</td>
+                            <td>Amazon</td>
+                            <td class="debit">Debit</td>
+                            <td class="debit">-₹2,499</td>
+                        </tr>
+
+                        <tr>
+                            <td>07 Sep</td>
+                            <td>Salary</td>
+                            <td class="credit">Credit</td>
+                            <td class="credit">+₹45,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>05 Sep</td>
+                            <td>Electricity Bill</td>
+                            <td class="debit">Debit</td>
+                            <td class="debit">-₹1,850</td>
+                        </tr>
+
+                        <tr>
+                            <td>03 Sep</td>
+                            <td>UPI Transfer</td>
+                            <td class="debit">Debit</td>
+                            <td class="debit">-₹3,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
